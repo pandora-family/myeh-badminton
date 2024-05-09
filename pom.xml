@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>io.walker.planes</groupId>
-    <artifactId>meyh-badminton</artifactId>
+    <artifactId>myeh-badminton</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>meyh-badminton</name>
-    <description>meyh-badminton</description>
+    <name>myeh-badminton</name>
+    <description>myeh-badminton</description>
     <properties>
         <java.version>8</java.version>
     </properties>
