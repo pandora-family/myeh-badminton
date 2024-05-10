@@ -1,0 +1,1 @@
+insert into user_info (user_name, create_at, create_by, update_at, update_by, version) values ('管理员', now(), 1, now(), 1, 1);
