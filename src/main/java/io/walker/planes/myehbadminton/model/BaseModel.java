@@ -3,6 +3,7 @@ package io.walker.planes.myehbadminton.model;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
@@ -10,7 +11,9 @@ import java.time.LocalDateTime;
  */
 @Data
 @EqualsAndHashCode
-public class BaseModel<T> {
+public class BaseModel<T> implements Serializable {
+
+    private static final long serialVersionUID = 2991044064104751614L;
 
     private T id;
 
