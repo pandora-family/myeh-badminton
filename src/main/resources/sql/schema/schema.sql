@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS user_info;
 CREATE TABLE user_info
 (
     `id`        bigint PRIMARY KEY AUTO_INCREMENT COMMENT '用户主键id',
-    `code` varchar(64) DEFAULT NOT NULL COMMENT '编码',
+    `code`      varchar(64) DEFAULT NOT NULL COMMENT '编码',
     `user_name` varchar(64) DEFAULT NOT NULL COMMENT '用户名',
     `create_at` datetime    DEFAULT NULL COMMENT '创建日期',
     `create_by` bigint      DEFAULT NULL COMMENT '创建人',
@@ -28,13 +28,42 @@ DROP TABLE IF EXISTS brand;
 CREATE TABLE brand
 (
     `id`        bigint PRIMARY KEY AUTO_INCREMENT COMMENT '用户主键id',
-    `code` varchar(64) DEFAULT NOT NULL COMMENT '编码',
-    `name` varchar(64) DEFAULT NOT NULL COMMENT '名称',
-    `logo` varchar(256) DEFAULT NULL COMMENT 'logo',
-    `country` varchar(64) DEFAULT NULL COMMENT '国家',
-    `create_at` datetime    DEFAULT NULL COMMENT '创建日期',
-    `create_by` bigint      DEFAULT NULL COMMENT '创建人',
-    `update_at` datetime    DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
-    `update_by` bigint      DEFAULT NULL COMMENT '更新人',
+    `code`      varchar(64)  DEFAULT NOT NULL COMMENT '编码',
+    `name`      varchar(64)  DEFAULT NOT NULL COMMENT '名称',
+    `logo`      varchar(256) DEFAULT NULL COMMENT 'logo',
+    `country`   varchar(64)  DEFAULT NULL COMMENT '国家',
+    `create_at` datetime     DEFAULT NULL COMMENT '创建日期',
+    `create_by` bigint       DEFAULT NULL COMMENT '创建人',
+    `update_at` datetime     DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+    `update_by` bigint       DEFAULT NULL COMMENT '更新人',
     `version`   bigint NOT NULL COMMENT '乐观锁版本号'
+);
+
+DROP TABLE IF EXISTS item;
+CREATE TABLE item
+(
+    `id`             bigint PRIMARY KEY AUTO_INCREMENT COMMENT '用户主键id',
+    `code`           varchar(64)  DEFAULT NOT NULL COMMENT '编码',
+    `brand_id`       bigint       DEFAULT NOT NULL COMMENT '品牌',
+    `item_type_dict` varchar(64)  DEFAULT NULL COMMENT '商品类型',
+    `desc`           varchar(256) DEFAULT NULL COMMENT '详细描述',
+    `create_at`      datetime     DEFAULT NULL COMMENT '创建日期',
+    `create_by`      bigint       DEFAULT NULL COMMENT '创建人',
+    `update_at`      datetime     DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+    `update_by`      bigint       DEFAULT NULL COMMENT '更新人',
+    `version`        bigint NOT NULL COMMENT '乐观锁版本号'
+);
+
+DROP TABLE IF EXISTS item_sku;
+CREATE TABLE item_sku
+(
+    `id`             bigint PRIMARY KEY AUTO_INCREMENT COMMENT '用户主键id',
+    `code`           varchar(64)  DEFAULT NOT NULL COMMENT '编码',
+    `item_id`       bigint       DEFAULT NOT NULL COMMENT '品牌',
+    `desc`           varchar(256) DEFAULT NULL COMMENT '详细描述',
+    `create_at`      datetime     DEFAULT NULL COMMENT '创建日期',
+    `create_by`      bigint       DEFAULT NULL COMMENT '创建人',
+    `update_at`      datetime     DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+    `update_by`      bigint       DEFAULT NULL COMMENT '更新人',
+    `version`        bigint NOT NULL COMMENT '乐观锁版本号'
 );

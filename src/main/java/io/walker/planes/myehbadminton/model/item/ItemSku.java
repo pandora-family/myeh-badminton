@@ -30,5 +30,5 @@ public class ItemSku extends BaseModel<Long> {
      * 描述
      * {@link io.walker.planes.myehbadminton.model.item.dto.ItemSkuDesc}
      */
-    private String description;
+    private String desc;
 }

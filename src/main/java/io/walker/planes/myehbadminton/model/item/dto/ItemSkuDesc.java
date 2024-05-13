@@ -15,11 +15,6 @@ public class ItemSkuDesc implements Serializable {
     private static final long serialVersionUID = 6729017413055546954L;
 
     /**
-     * 编码
-     */
-    private String code;
-
-    /**
      * 商品类型
      * {@link io.walker.planes.myehbadminton.constant.dict.ItemTypeDict}
      */

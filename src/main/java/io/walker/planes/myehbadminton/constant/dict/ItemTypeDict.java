@@ -3,7 +3,7 @@ package io.walker.planes.myehbadminton.constant.dict;
 /**
  * 商品类型
  *
- * @author 范逸东(东稚)
+ * @author Planeswalker23
  */
 public interface ItemTypeDict {
 

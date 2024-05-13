@@ -21,6 +21,11 @@ public class Item extends BaseModel<Long> {
     private String code;
 
     /**
+     * 名称
+     */
+    private String name;
+
+    /**
      * 品牌
      * {@link Brand}
      */
@@ -33,7 +38,8 @@ public class Item extends BaseModel<Long> {
     private String itemTypeDict;
 
     /**
-     * 型号
+     * 描述
+     * {@link io.walker.planes.myehbadminton.model.item.ItemSku}
      */
     private Long itemSkuId;
 }

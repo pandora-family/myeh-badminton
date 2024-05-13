@@ -5,7 +5,7 @@ import io.walker.planes.myehbadminton.model.user.UserInfo;
 import java.util.Optional;
 
 /**
- * @author 范逸东(东稚)
+ * @author Planeswalker23
  */
 public class UserContext {
 
