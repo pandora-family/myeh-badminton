@@ -1,4 +1,4 @@
-package io.walker.planes.myehbadminton.context;
+package io.walker.planes.myehbadminton.common.context;
 
 import io.walker.planes.myehbadminton.model.user.UserInfo;
 

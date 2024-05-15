@@ -1,5 +1,6 @@
 package io.walker.planes.myehbadminton.model.item.dto;
 
+import io.walker.planes.myehbadminton.common.constant.dict.ItemTypeDict;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -16,7 +17,7 @@ public class ItemSkuDesc implements Serializable {
 
     /**
      * 商品类型
-     * {@link io.walker.planes.myehbadminton.constant.dict.ItemTypeDict}
+     * {@link ItemTypeDict}
      */
     private String itemTypeDict;
 }

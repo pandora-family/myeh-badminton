@@ -1,4 +1,4 @@
-package io.walker.planes.myehbadminton.constant.dict;
+package io.walker.planes.myehbadminton.common.constant.dict;
 
 /**
  * 毛片物种
