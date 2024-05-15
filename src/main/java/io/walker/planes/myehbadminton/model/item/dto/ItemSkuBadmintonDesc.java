@@ -1,5 +1,8 @@
 package io.walker.planes.myehbadminton.model.item.dto;
 
+import io.walker.planes.myehbadminton.common.constant.dict.BadmintonFeatherLevelDict;
+import io.walker.planes.myehbadminton.common.constant.dict.BadmintonFeatherShapeDict;
+import io.walker.planes.myehbadminton.common.constant.dict.BadmintonFeatherSpeciesDict;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -16,19 +19,19 @@ public class ItemSkuBadmintonDesc extends ItemSkuDesc {
 
     /**
      * 毛片等级
-     * {@link io.walker.planes.myehbadminton.constant.dict.BadmintonFeatherLevelDict}
+     * {@link BadmintonFeatherLevelDict}
      */
     private String featherLevel;
 
     /**
      * 毛片物种
-     * {@link io.walker.planes.myehbadminton.constant.dict.BadmintonFeatherSpeciesDict}
+     * {@link BadmintonFeatherSpeciesDict}
      */
     private String featherSpeciesDict;
 
     /**
      * 毛片形状
-     * {@link io.walker.planes.myehbadminton.constant.dict.BadmintonFeatherShapeDict}
+     * {@link BadmintonFeatherShapeDict}
      */
     private String featherShapeDict;
 }

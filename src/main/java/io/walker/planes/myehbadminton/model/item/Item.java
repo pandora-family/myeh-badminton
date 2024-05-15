@@ -1,5 +1,6 @@
 package io.walker.planes.myehbadminton.model.item;
 
+import io.walker.planes.myehbadminton.common.constant.dict.ItemTypeDict;
 import io.walker.planes.myehbadminton.model.BaseModel;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -21,19 +22,19 @@ public class Item extends BaseModel<Long> {
     private String code;
 
     /**
-     * 名称
-     */
-    private String name;
-
-    /**
      * 品牌
      * {@link Brand}
      */
     private Long brandId;
 
     /**
+     * 名称
+     */
+    private String name;
+
+    /**
      * 商品类型
-     * {@link io.walker.planes.myehbadminton.constant.dict.ItemTypeDict}
+     * {@link ItemTypeDict}
      */
     private String itemTypeDict;
 
