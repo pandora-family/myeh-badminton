@@ -9,3 +9,6 @@ insert into item_price (id, item_sku_id, price_amt, price_at, create_at, create_
 insert into item_price (id, item_sku_id, price_amt, price_at, create_at, create_by, update_at, update_by, version) values (2, 1, 70.00, '2024-01-01', now(), 1, now(), 1, 1);
 insert into item_price (id, item_sku_id, price_amt, price_at, create_at, create_by, update_at, update_by, version) values (3, 1, 73.00, '2024-02-01', now(), 1, now(), 1, 1);
 insert into item_price (id, item_sku_id, price_amt, price_at, create_at, create_by, update_at, update_by, version) values (4, 1, 79.00, '2024-05-15', now(), 1, now(), 1, 1);
+
+-- item_recommend_record
+insert into item_recommend_record (id, item_id, item_sku_id, recommender, recommend_at, create_at, create_by, update_at, update_by, version) values (1, 1, 1, 1, '2023-09-04', now(), 1, now(), 1, 1);

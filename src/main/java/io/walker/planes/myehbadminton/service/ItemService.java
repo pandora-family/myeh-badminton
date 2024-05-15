@@ -1,14 +1,8 @@
 package io.walker.planes.myehbadminton.service;
 
-import io.walker.planes.myehbadminton.model.item.Brand;
-import io.walker.planes.myehbadminton.model.item.Item;
-import io.walker.planes.myehbadminton.model.item.ItemPrice;
-import io.walker.planes.myehbadminton.model.item.ItemSku;
+import io.walker.planes.myehbadminton.model.item.*;
 import io.walker.planes.myehbadminton.model.item.dto.ItemDTO;
-import io.walker.planes.myehbadminton.repo.item.BrandRepo;
-import io.walker.planes.myehbadminton.repo.item.ItemPriceRepo;
-import io.walker.planes.myehbadminton.repo.item.ItemRepo;
-import io.walker.planes.myehbadminton.repo.item.ItemSkuRepo;
+import io.walker.planes.myehbadminton.repo.item.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
@@ -26,6 +20,7 @@ public class ItemService {
     private final BrandRepo brandRepo;
     private final ItemSkuRepo itemSkuRepo;
     private final ItemPriceRepo itemPriceRepo;
+    private final ItemRecommendRecordRepo itemRecommendRecordRepo;
 
     public ItemDTO getItemByName(String name) {
         Item item = itemRepo.selectByName(name);
@@ -34,6 +29,10 @@ public class ItemService {
         }
 
         ItemDTO result = new ItemDTO(item);
+
+        if (item.getId() != null) {
+            result.setItemRecommendRecords(itemRecommendRecordRepo.selectByItemId(item.getId()));
+        }
 
         if (item.getBrandId() != null) {
             Brand brand = brandRepo.selectById(item.getBrandId());

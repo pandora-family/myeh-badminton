@@ -2,10 +2,7 @@ package io.walker.planes.myehbadminton.model.item.dto;
 
 import io.walker.planes.myehbadminton.common.constant.dict.ItemTypeDict;
 import io.walker.planes.myehbadminton.model.BaseModel;
-import io.walker.planes.myehbadminton.model.item.Brand;
-import io.walker.planes.myehbadminton.model.item.Item;
-import io.walker.planes.myehbadminton.model.item.ItemPrice;
-import io.walker.planes.myehbadminton.model.item.ItemSku;
+import io.walker.planes.myehbadminton.model.item.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -56,6 +53,11 @@ public class ItemDTO extends BaseModel<Long> {
      * 商品价格快照列表
      */
     private List<ItemPrice> itemPriceSnapshot;
+
+    /**
+     * 商品推荐记录列表
+     */
+    private List<ItemRecommendRecord> itemRecommendRecords;
 
     public ItemDTO(Item item) {
         super.setId(item.getId());
