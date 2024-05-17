@@ -8,7 +8,8 @@ CREATE TABLE user_info
     `create_by` bigint      DEFAULT NULL COMMENT '创建人',
     `update_at` datetime    DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
     `update_by` bigint      DEFAULT NULL COMMENT '更新人',
-    `version`   bigint      DEFAULT 1 NOT NULL COMMENT '乐观锁版本号'
+    `version`   bigint      DEFAULT 1 NOT NULL COMMENT '乐观锁版本号',
+    `deleted`   tinyint     DEFAULT 0 NOT NULL COMMENT '是否逻辑删除'
 );
 
 DROP TABLE IF EXISTS user_third_party_info;
@@ -21,7 +22,8 @@ CREATE TABLE user_third_party_info
     `create_by`    bigint      DEFAULT NULL COMMENT '创建人',
     `update_at`    datetime    DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
     `update_by`    bigint      DEFAULT NULL COMMENT '更新人',
-    `version`      bigint      DEFAULT 1 NOT NULL COMMENT '乐观锁版本号'
+    `version`      bigint      DEFAULT 1 NOT NULL COMMENT '乐观锁版本号',
+    `deleted`   tinyint     DEFAULT 0 NOT NULL COMMENT '是否逻辑删除'
 );
 
 DROP TABLE IF EXISTS brand;
@@ -36,7 +38,8 @@ CREATE TABLE brand
     `create_by` bigint       DEFAULT NULL COMMENT '创建人',
     `update_at` datetime     DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
     `update_by` bigint       DEFAULT NULL COMMENT '更新人',
-    `version`   bigint       DEFAULT 1 NOT NULL COMMENT '乐观锁版本号'
+    `version`   bigint       DEFAULT 1 NOT NULL COMMENT '乐观锁版本号',
+    `deleted`   tinyint     DEFAULT 0 NOT NULL COMMENT '是否逻辑删除'
 );
 
 DROP TABLE IF EXISTS item;
@@ -52,7 +55,8 @@ CREATE TABLE item
     `create_by`      bigint      DEFAULT NULL COMMENT '创建人',
     `update_at`      datetime    DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
     `update_by`      bigint      DEFAULT NULL COMMENT '更新人',
-    `version`        bigint      DEFAULT 1 NOT NULL COMMENT '乐观锁版本号'
+    `version`        bigint      DEFAULT 1 NOT NULL COMMENT '乐观锁版本号',
+    `deleted`   tinyint     DEFAULT 0 NOT NULL COMMENT '是否逻辑删除'
 );
 
 DROP TABLE IF EXISTS item_sku;
@@ -66,7 +70,8 @@ CREATE TABLE item_sku
     `create_by` bigint       DEFAULT NULL COMMENT '创建人',
     `update_at` datetime     DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
     `update_by` bigint       DEFAULT NULL COMMENT '更新人',
-    `version`   bigint       DEFAULT 1 NOT NULL COMMENT '乐观锁版本号'
+    `version`   bigint       DEFAULT 1 NOT NULL COMMENT '乐观锁版本号',
+    `deleted`   tinyint     DEFAULT 0 NOT NULL COMMENT '是否逻辑删除'
 );
 
 DROP TABLE IF EXISTS item_price;
@@ -80,7 +85,8 @@ CREATE TABLE item_price
     `create_by`   bigint         DEFAULT NULL COMMENT '创建人',
     `update_at`   datetime       DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
     `update_by`   bigint         DEFAULT NULL COMMENT '更新人',
-    `version`     bigint         DEFAULT 1 NOT NULL COMMENT '乐观锁版本号'
+    `version`     bigint         DEFAULT 1 NOT NULL COMMENT '乐观锁版本号',
+    `deleted`   tinyint     DEFAULT 0 NOT NULL COMMENT '是否逻辑删除'
 );
 
 DROP TABLE IF EXISTS item_recommend_record;
@@ -95,5 +101,6 @@ CREATE TABLE item_recommend_record
     `create_by`    bigint   DEFAULT NULL COMMENT '创建人',
     `update_at`    datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
     `update_by`    bigint   DEFAULT NULL COMMENT '更新人',
-    `version`      bigint   DEFAULT 1 NOT NULL COMMENT '乐观锁版本号'
+    `version`      bigint   DEFAULT 1 NOT NULL COMMENT '乐观锁版本号',
+    `deleted`   tinyint     DEFAULT 0 NOT NULL COMMENT '是否逻辑删除'
 );
