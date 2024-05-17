@@ -3,3 +3,15 @@ spring:
     name: myeh-badminton
   profiles:
     active: h2
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+logging:
+  level:
+    root: WARN
+    io:
+      walker:
+        planes:
+          myehbadminton: DEBUG

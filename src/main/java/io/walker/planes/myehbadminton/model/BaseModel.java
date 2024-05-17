@@ -26,4 +26,6 @@ public class BaseModel<T> implements Serializable {
     private LocalDateTime updateAt;
 
     private Long updateBy;
+
+    private Boolean deleted;
 }
